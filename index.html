@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
-    <title>Treino da Semana</title>
+    <title>GymBro</title>
 </head>
 <body>
     <header>
@@ -14,12 +14,268 @@
             <button onclick="toggleTimer()">▶️</button>
         </div>
     </header>
-    <div class="container">
-        <h2 id="dia-titulo"></h2>
-        <button class="add-btn" onclick="adicionarExercicio()">Adicionar Exercício</button>
-        <div id="exercicios"></div>
-    </div>
 
-    <script src="./script/script.js"></script>
+    <section class="container">
+        <h2 id="titulo-dia">Treino do dia</h2>
+
+        <label for="select-dia">Escolha o dia de treino:</label>
+        <select id="select-dia" onchange="mostrarDiaSelecionado()">
+            <option value="segunda">Segunda-feira</option>
+            <option value="terca">Terça-feira</option>
+            <option value="quarta">Quarta-feira</option>
+            <option value="quinta">Quinta-feira</option>
+            <option value="sexta">Sexta-feira</option>
+        </select>
+
+        <div id="botoes-variante">
+            <button onclick="alternarVariação('segunda')">Trocar variação</button>
+        </div>
+
+        <!-- Treinos Segunda-feira -->
+        <div id="segunda-padrao" class="bloco-dia">
+
+            <div class="card">
+                <h3>Puxador Frente</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/back/puxador-frente.gif" alt="Puxador Frente">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Pull Down</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/back/pull-down.gif" alt="Pull Down">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Remada Baixa</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/back/remada-baixa.gif" alt="Remada Baixa">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Trapézio</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/back/trapezio.gif" alt="Trapézio">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Rosca Martelo</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/biceps/rosca-martelo.gif" alt="Rosca Martelo">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Rosca Martelo Banco Inclinado</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/biceps/rosca-martelo-banco-inclinado.gif" alt="Rosca Martelo Banco Inclinado">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Barra W</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/biceps/barra-w.gif" alt="Barra W">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Rosca Polia Alta</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/biceps/rosca-polia-alta.gif" alt="Rosca Polia Alta">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Abdominal Declinado</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/abdomen/abdominal-declinado.gif" alt="Abdominal Declinado">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Variação Treinos Segunda-feira -->
+        <div id="segunda-variacao" class="bloco-dia" style="display: none;">
+            <div class="card">
+                <h3>Puxador Triângulo</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="/img/puxada-triangulo.jpg" alt="Puxada com triângulo">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Abdominal Declinado</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/abdomen/abdominal-declinado.gif" alt="Abdominal Declinado">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Treinos Sexta-feira -->
+        <div id="sexta-padrao" class="bloco-dia">
+            <div class="card">
+                <h3>Elevação Lateral Halter</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/elevacao-lateral-halter.gif" alt="Elevação Lateral Halter">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Elevação Frontal Halter</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/elevacao-frontal-halter.gif" alt="Elevação Frontal Halter">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Desenvolvimento com Halter</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/desenvolvimento-halter.gif" alt="Desenvolvimento com Halter">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Desenvolvimento Arnold</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/desenvolvimento-arnold.gif" alt="Desenvolvimento Arnold">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Variação Treinos Sexta-feira -->
+         <div id="sexta-variacao" class="bloco-dia" style="display: none;">
+            <div class="card">
+                <h3>Elevação Lateral Polia</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/elevacao-lateral-polia.gif" alt="Elevação Lateral Polia">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Desenvolvimento Máquina</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/desenvolvimento-maquina.gif" alt="Desenvolvimento Máquina">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Elevação Frontal Polia</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/elevacao-frontal-polia.gif" alt="Elevação Frontal Polia">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Cruxifixo Inverso Polia</h3>
+                <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
+                <img class="imagem-preview" src="./assets/shoulder/cruxifixo-inverso-polia.gif" alt="Cruxifixo Inverso Polia">
+                <div class="series-list">
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                </div>
+            </div>
+         </div>
+    </section>
+    <script src="/script/script.js"></script>
 </body>
 </html>
