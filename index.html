@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Treino da Semana</title>
+</head>
+<body>
+    <header>
+        <div class="timer">
+            Tempo de Descanso: <span id="timer">01:30</span>
+            <button onclick="resetTimer()">Resetar</button>
+            <button onclick="toggleTimer()">▶️</button>
+        </div>
+    </header>
+    <div class="container">
+        <h2 id="dia-titulo"></h2>
+        <button class="add-btn" onclick="adicionarExercicio()">Adicionar Exercício</button>
+        <div id="exercicios"></div>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
