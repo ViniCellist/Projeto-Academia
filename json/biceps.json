@@ -1,0 +1,42 @@
+{
+    "barra-w": {
+        "id": 1,
+        "nome": "Barra W",
+        "gif": "../assets/biceps/barra-w.gif"
+    },
+    "rosca-direta": {
+        "id": 2,
+        "nome": "Rosca Direta",
+        "gif": "../assets/biceps/rosca-direta.gif"
+    },
+    "rosca-martelo-banco-inclinado": {
+        "id": 3,
+        "nome": "Rosca Martelo Banco Inclinado",
+        "gif": "../assets/biceps/rosca-martelo-banco-inclinado.gif"
+    },
+    "rosca-martelo-polia": {
+        "id": 4,
+        "nome": "Rosca Martelo Polia",
+        "gif": "../assets/biceps/rosca-martelo-polia.gif"
+    },
+    "rosca-martelo-variacao": {
+        "id": 5,
+        "nome": "Rosca Martelo Variação",
+        "gif": "../assets/biceps/rosca-martelo-variação.gif"
+    },
+    "rosca-martelo": {
+        "id": 6,
+        "nome": "Rosca Martelo",
+        "gif": "../assets/biceps/rosca-martelo.gif"
+    },
+    "rosca-polia-alta": {
+        "id": 7,
+        "nome": "Rosca Polia Alta",
+        "gif": "../assets/biceps/rosca-polia-alta.gif"
+    },
+    "rosca-scott": {
+        "id": 8,
+        "nome": "Rosca Scott Máquina",
+        "gif": "../assets/biceps/rosca-scott-maquina.gif"
+    }
+}

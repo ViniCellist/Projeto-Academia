@@ -1,0 +1,37 @@
+{
+    "graviton": {
+        "id": 1,
+        "nome": "Graviton",
+        "gif": "../assets/back/graviton.gif"
+    },
+    "pulldown": {
+        "id": 2,
+        "nome": "Pulldown",
+        "gif": "../assets/back/pull-down.gif"
+    },
+    "puxador-frente-triangulo": {
+        "id": 3,
+        "nome": "Puxador Frente Triângulo",
+        "gif": "../assets/back/puxador-frente-triangulo.gif"
+    },
+    "puxador-frente": {
+        "id": 4,
+        "nome": "Puxador Frente",
+        "gif": "../assets/back/puxador-frente.gif"
+    },
+    "remada-articulada": {
+        "id": 5,
+        "nome": "Remada Articulada",
+        "gif": "../assets/back/remada-articulada.gif"
+    },
+    "remada-baixa": {
+        "id": 6,
+        "nome": "Remada Baixa",
+        "gif": "../assets/back/remada-baixa.gif"
+    },
+    "trapezio": {
+        "id": 7,
+        "nome": "Trapézio",
+        "gif": "../assets/back/trapezio.gif"
+    }
+}

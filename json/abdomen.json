@@ -1,0 +1,17 @@
+{
+    "abdomen-declinado": {
+        "id": 1,
+        "nome": "Abdominal Declinado",
+        "gif": "../assets/abdomen/abdominal-declinado.gif"
+    },
+    "abdomen-infra-solo": {
+        "id": 2,
+        "nome": "Abdomen Infra Solo",
+        "gif": "../assets/abdomen/abdominal-infra-solo.gif"
+    },
+    "abdomen-barra": {
+        "id": 3,
+        "nome": "Abdomen na Barra",
+        "gif": "../assets/abdomen/abdominal-na-barra.gif"
+    }
+}
