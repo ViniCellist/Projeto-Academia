@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>GymBro</title>
 </head>
 <body>
     <header>
         <div class="timer">
-            Tempo de Descanso: <span id="timer">01:30</span>
-            <button onclick="resetTimer()">Resetar</button>
-            <button onclick="toggleTimer()">▶️</button>
+            Tempo de Descanso: <span id="timer">01:00</span>
+            <button onclick="resetTimer()" class="timer-btn">Resetar</button>
+            <button onclick="toggleTimer()" class="timer-btn">Play</button>
         </div>
     </header>
 
     <section class="container">
-        <h2 id="titulo-dia">Treino do dia</h2>
+        <h2 id="titulo-dia"></h2>
 
-        <label for="select-dia">Escolha o dia de treino:</label>
-        <select id="select-dia" onchange="mostrarDiaSelecionado()">
+        <label for="select-dia" class="texto-seletor">Escolha o dia de treino:</label>
+        <select id="select-dia" onchange="mostrarDiaSelecionado()" class="seletor-opcao">
             <option value="segunda">Segunda-feira</option>
             <option value="terca">Terça-feira</option>
             <option value="quarta">Quarta-feira</option>
@@ -28,7 +29,7 @@
         </select>
 
         <div id="botoes-variante">
-            <button onclick="alternarVariação('segunda')">Trocar variação</button>
+            <button onclick="alternarVariação('segunda')" class="btn-variacao">Trocar variação</button>
         </div>
 
         <!-- ====================================================== -->
@@ -37,16 +38,15 @@
 
         <!-- Segunda-feira -->
         <div id="segunda-padrao" class="bloco-dia">
-
             <div class="card">
                 <h3>Puxador Frente</h3>
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/puxador-frente.gif" alt="Puxador Frente">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -55,10 +55,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/pull-down.gif" alt="Pull Down">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -67,10 +67,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/remada-baixa.gif" alt="Remada Baixa">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -79,10 +79,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/trapezio.gif" alt="Trapézio">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -91,10 +91,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/rosca-martelo.gif" alt="Rosca Martelo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -103,10 +103,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/rosca-martelo-banco-inclinado.gif" alt="Rosca Martelo Banco Inclinado">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -115,10 +115,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/barra-w.gif" alt="Barra W">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -127,10 +127,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/rosca-polia-alta.gif" alt="Rosca Polia Alta">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -139,14 +139,12 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/abdomen/abdominal-declinado.gif" alt="Abdominal Declinado">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
-
-
         </div>
 
         <!-- Terça-feira -->
@@ -156,10 +154,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/agachamento-livre.gif" alt="Agachamento Livre">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -168,10 +166,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/cadeira-extensora.gif" alt="Cadeira Extensora">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -180,10 +178,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/afundo.gif" alt="Afundo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -192,10 +190,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/cadeira-adutora.gif" alt="Cadeira Adutora">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -204,10 +202,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/pendulo.gif" alt="Pêndulo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -216,10 +214,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/panturrilha-sentado.gif" alt="Panturrilha Sentado Máquina">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
         </div>
@@ -231,10 +229,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/supino-reto-halter.gif" alt="Supino Reto com Halter">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -243,10 +241,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/supino-inclinado-halter.gif" alt="Supino Inclinado com Halter">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -255,10 +253,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/supino-declinado-halter.gif" alt="Supino Declinado com Halter">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -267,10 +265,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/peck-deck-fly.gif" alt="Peck Deck Fly">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -279,10 +277,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/mergulho-paralelo.gif" alt="Mergulho Paralelo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -291,10 +289,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/triceps-banco.gif" alt="Tríceps Banco">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -303,10 +301,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/triceps-coice.gif" alt="Tríceps Coice">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -315,10 +313,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/triceps-polia-alta-corda.gif" alt="Tríceps Corda">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -327,10 +325,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/abdomen/abdominal-na-barra.gif" alt="Abdominal Tesoura">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
         </div>
@@ -342,10 +340,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/elevacao-pelvica.gif" alt="Elevação Pélvica">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -354,10 +352,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/cadeira-flexora.gif" alt="Cadeira Flexora">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -366,10 +364,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/cama-flexora.gif" alt="Cama Flexora">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -378,10 +376,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/cadeira-abdutora.gif" alt="Cadeira Abdutora">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -390,10 +388,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/pendulo.gif" alt="Pêndulo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -402,10 +400,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/panturrilha-sentado.gif" alt="Panturrilha Sentado Máquina">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
         </div>
@@ -417,10 +415,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/elevacao-lateral-halter.gif" alt="Elevação Lateral Halter">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -429,10 +427,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/elevacao-frontal-halter.gif" alt="Elevação Frontal Halter">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -441,10 +439,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/desenvolvimento-halter.gif" alt="Desenvolvimento com Halter">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -453,10 +451,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/desenvolvimento-arnold.gif" alt="Desenvolvimento Arnold">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -465,10 +463,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/forearm/rosca-punho.gif" alt="Rosca Punho">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -477,10 +475,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/forearm/rolinho.gif" alt="Rolinho">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -489,13 +487,12 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/abdomen/abdominal-infra-solo.gif" alt="Abdominal Infra Solo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
-
         </div>
 
         <!-- ====================================================== -->
@@ -509,10 +506,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/puxador-frente-triangulo.gif" alt="Puxador Frente Triângulo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -521,10 +518,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/remada-articulada.gif" alt="Remada Articulada">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -533,10 +530,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/graviton.gif" alt="Graviton">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -545,10 +542,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/back/trapezio.gif" alt="Trapézio">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -557,10 +554,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/rosca-direta.gif" alt="Rosca Direta com Halter">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -569,10 +566,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/rosca-scott-maquina.gif" alt="Rosca Scott Máquina">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -581,10 +578,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/rosca-martelo-variação.gif" alt="Rosca Martelo Variação">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -593,10 +590,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/biceps/rosca-martelo-polia.gif" alt="Rosca Martelo Polia">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -605,10 +602,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/abdomen/abdominal-declinado.gif" alt="Abdominal Declinado">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -621,10 +618,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/hack.gif" alt="Agachamento Hack">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -633,10 +630,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/agachamento-bulgaro.gif" alt="Agachamento Búlgaro">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -645,10 +642,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/agachamento-sumo.gif" alt="Agachamento Sumô">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -657,10 +654,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/sissy-squat.gif" alt="Sissy Squat">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -669,10 +666,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/panturrilha-sentado.gif" alt="Panturrilha Sentado Máquina">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -681,10 +678,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/pendulo.gif" alt="Pêndulo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
         </div>
@@ -696,10 +693,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/crossover-polia-alta.gif" alt="Crossover Polia Alta">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -708,10 +705,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/crossover-polia-baixa.gif" alt="Crossover Polia Baixa">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -720,10 +717,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/crucifixo.gif" alt="Crucifixo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -732,10 +729,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/chest/chest-press-machine.gif" alt="Chest Press Máquina">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -744,10 +741,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/triceps-frances.gif" alt="Tríceps Francês">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -756,10 +753,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/Triceps-polia-alta.gif" alt="Tríceps Francês">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -768,10 +765,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/triceps-pulley-corda.gif" alt="Tríceps Pulley Corda">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -780,10 +777,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/triceps/triceps-testa-banco.gif" alt="Tríceps Testa">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -792,10 +789,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/abdomen/abdominal-na-barra.gif" alt="Abdominal Tesoura">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
         </div>
@@ -808,10 +805,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/levantamento-terra.gif" alt="Levantamento Terra">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -820,10 +817,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/stiff.gif" alt="Stiff">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -832,10 +829,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/cadeira-flexora.gif" alt="Cadeira Flexora">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -844,10 +841,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/cama-flexora.gif" alt="Cama Flexora">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -856,10 +853,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/pendulo.gif" alt="Pêndulo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -868,10 +865,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/leg/panturrilha-sentado.gif" alt="Panturrilha Sentado Máquina">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
         </div>
@@ -883,10 +880,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/elevacao-lateral-polia.gif" alt="Elevação Lateral Polia">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -895,10 +892,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/desenvolvimento-maquina.gif" alt="Desenvolvimento Máquina">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -907,10 +904,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/elevacao-frontal-polia.gif" alt="Elevação Frontal Polia">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -919,10 +916,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/shoulder/cruxifixo-inverso-polia.gif" alt="Cruxifixo Inverso Polia">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -931,10 +928,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/forearm/rosca-punho-variação.gif" alt="Rosca Punho Extensão">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -943,10 +940,10 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/forearm/rosca-inversa-barra-w.gif" alt="Rosca Inversa Barra W">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
             </div>
 
@@ -955,13 +952,12 @@
                 <span class="concluido-label" style="display: none;"> - Exercício concluído!</span>
                 <img class="imagem-preview" src="./assets/abdomen/abdominal-infra-solo.gif" alt="Abdominal Infra Solo">
                 <div class="series-list">
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 1</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 2</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 3</label>
-                    <label><input type="checkbox" onchange="verificarConclusao(this)"> Série 4</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 1</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 2</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 3</label>
+                    <label><input type="checkbox" onchange="verificarConclusao(this)" class="input-checkbox-style"> Série 4</label>
                 </div>
-            </div>
-            
+            </div>  
          </div>
     </section>
     <script src="/script/script.js"></script>

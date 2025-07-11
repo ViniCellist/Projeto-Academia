@@ -63,7 +63,7 @@
     function mostrarDiaSelecionado() {
       const dias = ['segunda', 'terca', 'quarta', 'quinta', 'sexta'];
       const titulos = {
-        segunda: 'Treino de Costas e Bíceps',
+        segunda: 'Costas e Bíceps',
         terca: 'Quadríceps',
         quarta: 'Peito e Tríceps',
         quinta: 'Posterior',

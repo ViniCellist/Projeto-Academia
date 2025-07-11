@@ -1,68 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    .timer {
-      font-size: 1.2em;
-    }
-    .container {
-      padding: 80px 20px 20px;
-    }
-    h2 {
-      text-align: center;
-    }
-    .add-btn {
-      display: block;
-      margin: 10px auto;
-      padding: 10px 20px;
-      font-size: 1em;
-    }
-    .card {
-      background-color: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-      margin-bottom: 15px;
-      transition: background-color 0.3s ease;
-    }
-    .card.completed {
-      background-color: #c8f7c5;
-    }
-    .card input[type="text"], .card input[type="number"], .card input[type="file"] {
-      display: block;
-      margin-bottom: 10px;
-      width: 100%;
-    }
-    .series-list label {
-      display: block;
-    }
-    .remove-btn {
-      background-color: red;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-    .imagem-preview {
-      max-width: 100%;
-      margin-bottom: 10px;
-    }
-    .concluido-label {
-      font-weight: bold;
-      color: green;
-      margin-bottom: 10px;
-      display: inline-block;
-    }
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #4A9782;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.timer {
+  font-size: 2rem;
+}
+
+.timer-btn {
+  font-size: 1.5rem;
+  color: #004030;
+  border-radius: 10px;
+}
+
+.container {
+  padding: 80px 20px 20px;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.texto-seletor {
+
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 1.5rem;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card.completed {
+  background-color: #c8f7c5;
+}
+
+.card .card input[type="number"] {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.series-list {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.series-list label {
+  display: block;
+}
+
+.input-checkbox-style {
+  width: 25px;
+  height: 25px;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.imagem-preview {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.concluido-label {
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.texto-seletor {
+  font-size: 1.5rem;
+}
+
+.seletor-opcao {
+  width: 130px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.btn-variacao {
+  font-size: 1.5rem;
+}
+
+#botoes-variante {
+  text-align: center;
+  margin-top: 1rem;
+}
